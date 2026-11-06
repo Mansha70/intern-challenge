@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "btc-options-straddle"
+version = "0.1.0"
+description = "A testnet-first BTC options straddle example using NautilusTrader and Bybit"
+readme = "README.md"
+requires-python = ">=3.13,<3.16"
+dependencies = [
+    "nautilus_trader==2.0.0rc9.dev20261104",
+]
+
+[project.scripts]
+btc-straddle = "btc_straddle.runner:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
